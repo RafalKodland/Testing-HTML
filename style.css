@@ -1,32 +1,59 @@
-@keyframes color-change {
+@keyframes size-up {
     0% {
-      color: blue;
+      font-size: 24px;
     }
 
-    50% {
-      color: red;
+    80% {
+      font-size: 30px;
     }
 
     100% {
-      color: blue;
+      font-size: 28px;
     }
 }
 
+@keyframes size-down {
+  0% {
+    font-size: 28px;
+  }
+
+  80% {
+    font-size: 22px;
+  }
+
+  100% {
+    font-size: 24px;
+  }
+}
+
 body {
-    font-family: Arial,  sans-serif; /* Rodzina czcionek */
-    font-size: 11px; /* Rozmiar głównej czcionki w <p></p> tag  */
-    background-color: #f0f0f0; /* Kolor tła strony internetowej */
-    color: #333333; /* Kolor tła strony internetowej*/ 
+    font-family: Inter, Arial,  sans-serif; /* Rodzina czcionek */
+    font-size: 16px; /* Rozmiar głównej czcionki w <p></p> tag  */
+    background-color: #FFFFFF; /* Kolor tła strony internetowej */
+    color: #5988FF; /* Kolor tła strony internetowej*/ 
+    text-align: center;
 }
 
 h1 {
-    color: #00a800; /* Kolor nagłówka */
-    font-size: 24px; /* Rozmiar czcionki nagłówka */
-    font-family: Georgia, serif; /* Rodzina czcionek używana w nagłówku */
-    animation: color-change 3s infinite;
-    transition: 1s;
+    color: #FD98FB; /* Kolor nagłówka */
+    font-size: 30px; /* Rozmiar czcionki nagłówka */
+    /*animation: size-down 0.5s 1;*/
+    transition: 0.5s cubic-bezier(.15,1.17,.54,1.9);
 }
 
 h1:hover {
-    font-size: 30px;
+    font-size: 38px;
+    /*animation: size-up 0.5s 1;*/
+}
+
+li {
+  text-align: left;
+}
+
+.sekcja {
+  border: #5988FF 5px solid;
+  border-radius: 25px;
+  padding: 10px 20%;
+  margin: 0 20%;
+  margin-bottom: 50px;
 }
